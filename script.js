@@ -1,6 +1,6 @@
 function add(a, b) {
     let sum = a + b;
-    return (sum);
+    return sum;
 }
 
 function multiply(a, b) {
@@ -8,7 +8,7 @@ function multiply(a, b) {
     for (let x = 0; x <= b - 1; x++) {
         sum += add(a, 0);
     }
-    return (sum);
+    return sum;
 }
 
 function power(a, b) {
@@ -20,7 +20,7 @@ function power(a, b) {
             sum = multiply(sum, a);
 
         }
-        return (sum);
+        return sum;
     }
 }
 
@@ -31,5 +31,19 @@ function factorial(a) {
         sum = multiply(sum, a);
 
     }
-    return (sum);
+    return sum;
+}
+
+function fibonacci(a) {
+    index = [0,1]
+    if(a <= 0) {
+        return("invalid input!")
+    }
+    else {
+        for(let x = 0; x <= a; x++) {
+            index.push(add(index[x], index[x + 1]))    
+        }
+        return index[a - 1]
+    }
+
 }
